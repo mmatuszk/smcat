@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	</head>
+	<body>
+		
+	</body>
+	
+	<script>
+		$.post('db.php', {'cmd': 'getUnassignedMessages', 'cat_name': 'Thank you'}, function (data) {
+			$('body').append(data);
+			result = JSON.parse(data);
+			console.log(JSON.parse(result.data));
+			console.log(JSON.parse(data));
+		});
+	</script>
+</html>
